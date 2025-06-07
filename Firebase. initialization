@@ -1,0 +1,20 @@
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCd4IDyxg1idAnez3eRh2u5gvs895RZWnU",
+  authDomain: "exaquizapp.firebaseapp.com",
+  projectId: "exaquizapp",
+  storageBucket: "exaquizapp.firebasestorage.app",
+  messagingSenderId: "183367443198",
+  appId: "1:183367443198:web:f223aa1ba97e36a621bbaf"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+export { db, auth };
+
+import { db, auth } from './firebase';
